@@ -4,34 +4,34 @@ import CardList from "./Components/Card-List/CardList";
 
 function App() {
   const [cats, setcats] = useState([]);
-/*   const [count, setCount] = useState(0);
-  const [email, setEmail] = useState(""); */
+  const [searchCats, setCatSearchField] = useState("");
 
-  /*   function handleEmail(e) {
-    setEmail(e.target.value);
-  }
-
-  function handleName(e) {
-    setName(e.target.value);
-  }
- */
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
       .then((users) => setcats(users));
   }, []);
 
+  function searchCatHandler(e) {
+    setCatSearchField(e.target.value);
+    
+  }
+
+  const filteredCats = cats.filter((cat) => {
+    return cat.name.toLowerCase().includes(searchCats.toLowerCase());
+  });
+
   return (
     <div className="App">
       <header className="">
         <h1>Cats</h1>
-        {/*         <div>Name</div>
-        <input onChange={handleName} />
-        <div>Email</div>
-        <input onChange={handleEmail} />
-        <button onClick={() => setCount(count + 1)}>Click me!</button> */}
+        <input
+          type="search"
+          placeholder="search cats"
+          onChange={searchCatHandler}
+        />
         <div className="">
-          <CardList cats={cats} />
+          <CardList cats={filteredCats} />
         </div>
       </header>{" "}
       *
