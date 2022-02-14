@@ -1,6 +1,6 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import CardList from "./Components/Cards/CardList";
+import CardList from "./Components/Card-List/CardList";
 
 function App() {
   const [monsters, setMonsters] = useState([]);
@@ -23,14 +23,14 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="">
         <h1>Monsters</h1>
         {/*         <div>Name</div>
         <input onChange={handleName} />
         <div>Email</div>
         <input onChange={handleEmail} />
         <button onClick={() => setCount(count + 1)}>Click me!</button> */}
-        <div className="Cards-Container">
+        <div className="card-list">
           <CardList monsters={monsters} />
         </div>
       </header>{" "}

@@ -19,8 +19,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-/*   justify-content: center;
- */  font-size: calc(10px + 2vmin);
+  /*   justify-content: center;
+ */
+  font-size: calc(10px + 2vmin);
   color: white;
 }
 
@@ -28,26 +29,12 @@
   color: #61dafb;
 }
 
-.Cards-Container{
-  display: flex;
-  flex-direction: row;
-}
+
 
 .Img-Container {
   background-color: #282c34;
   margin: 6px;
   height: 256px;
-}
-
-.Card {
-  display: flex;
-  flex-direction: column;
-  margin: 12px;
-  border-radius: 12px;
-  border: solid;
-  width: 244px;
-  height: 324px;
-  background-color: #83d9f1;
 }
 
 @keyframes App-logo-spin {

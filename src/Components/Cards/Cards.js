@@ -1,7 +1,9 @@
+import "./Card.styles.css"
+
 function Cards({ monsters, id, email }) {
   return (
     <div>
-      <div className="Card">
+      <div className="Card-Container">
         <div className="Img-Container">
           <img alt=""/>
         </div>
