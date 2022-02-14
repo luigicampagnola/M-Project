@@ -1,15 +1,14 @@
-import "./Card.styles.css"
+import "./Card.styles.css";
 
-function Cards({ monsters, id, email }) {
+function Cards({ cats }) {
   return (
     <div>
       <div className="Card-Container">
-        <div className="Img-Container">
-          <img alt=""/>
-        </div>
-        <div>{monsters}</div>
-        <div>{id}</div>
-        <div>{email}</div>
+        <img alt="" src={`https://robohash.org/${cats.id}?set=set4&size=180x160`} />
+
+        <h1>{cats.name}</h1>
+        <div>{cats.id}</div>
+        <div>{cats.email}</div>
       </div>
     </div>
   );
