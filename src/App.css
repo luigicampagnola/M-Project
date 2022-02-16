@@ -13,6 +13,12 @@
   }
 }
 
+h1 {
+  font-family: "Akaya Telivigala";
+  font-size: 64px;
+}
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,8 +34,6 @@
 .App-link {
   color: #61dafb;
 }
-
-
 
 .Img-Container {
   background-color: #282c34;
